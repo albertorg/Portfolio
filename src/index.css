@@ -33,7 +33,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--color-bg);
   color: var(--color-white);
-  line-height: 1.7px;
+  line-height: 1.7;
   background-image: url(../src/assets/bg-texture.png);
 }
 
@@ -106,3 +106,24 @@ img {
   object-fit: cover;
 }
 
+/* ============ Media queries (Medium devices) =============== */
+@media screen and (max-width: 1024px){
+  .container{
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+/* ============ Media queries (Smal devices) =============== */
+@media screen and (max-width: 600px){
+  .container{
+    width: var(--container-width-sm);
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}
