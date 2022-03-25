@@ -1,0 +1,116 @@
+.navbar {
+    border-bottom: 1px solid var(--color-primary-variant);
+    box-shadow: 0px 2px 10px var(--color-primary-variant);
+    background: var(--color-primary);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+
+.nav_container a {
+    color: var(--color-bg);
+    font-weight: 500;
+}
+
+.logo_container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_container > a {
+    color: var(--color-bg);
+    font-size: 1.5rem;
+    font-weight: 500;
+    
+    display: inline-block;
+}
+
+.collapse {
+    background: transparent;
+    font-size: 26px;
+    color: var(--color-bg);
+    display: none;
+    cursor: pointer;
+}
+
+.collapse:hover {
+    color: #ebebf5;
+}
+
+.collapse_icon {
+    display: flex;
+    text-align: center;
+}
+
+.mobilNavigation {
+    display: none;
+}
+
+.menu_container {
+    flex-grow: 0.2;
+}
+
+.menu_container ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.menu_container ul > li {
+    margin-left: 10px;
+}
+
+/* ============ Media queries (Medium devices) =============== */
+@media screen and (max-width: 860px){
+  .collapse {
+      display: block;
+  }
+
+  .navigation {
+      display: none;
+  }
+
+  .mobilNavigation {
+      display: flex;
+      align-items: center;
+  }
+
+  .mobilNavigation ul {
+      background-color: rgba(77, 181, 255);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 72px;
+      right: 0;
+      width: 100%;
+      /* border-top: 2px solid var(--color-bg); */
+      padding: 10px 0 10px 0;
+      box-shadow: 0px 0px 5px var(--color-bg-variant) ;
+  }
+
+  .mobilNavigation ul li {
+      padding: 5px 0 5px 10%;
+      margin-left: 0px;
+      /* padding-left: 10%; */
+  }
+
+  .mobilNavigation ul li:hover {
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+  }
+}
+
+
+
+

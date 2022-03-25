@@ -2,7 +2,7 @@ footer {
     background: var(--color-primary);
     padding: 3rem 0;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 7rem;
 }
 
@@ -11,6 +11,7 @@ footer a {
 }
 
 .footer_logo {
+    color: var(--color-bg);
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -49,7 +50,8 @@ footer a {
 
 .footer_copy {
     margin-bottom: 4rem;
-    color: var(--color-bg);
+    color: rgb(59, 59, 59);
+    font-size: medium;
 }
 
 /* ============ Media queries (Smal devices) =============== */
