@@ -4,6 +4,7 @@ import { RiMessengerLine } from 'react-icons/ri'
 import { BsWhatsapp } from 'react-icons/bs'
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser';
+// import { Toast } from '../toat/Toast'
  
 export const Contact = () => {
   const form = useRef();

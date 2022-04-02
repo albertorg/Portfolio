@@ -1,0 +1,37 @@
+.toast {
+    color: black;
+
+
+    position: fixed;
+    top: 95px;
+    right: 30px;
+    border-radius: 12px;
+    border-left: 6px solid #4070f4;
+    background: var(--color-white);
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toast_content {
+    display: flex;
+    align-items: center;
+}
+
+.check_icon {
+    
+    color: #4070f4;
+    font-size: 35px;
+    
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 400;
+    color: #666666;
+}

@@ -7,11 +7,13 @@ import { Portfolio } from "./components/portfolio/Portfolio";
 // import { Testimonials } from "./components/testimonials/Testimonials";
 import { Contact } from "./components/contact/Contact";
 import { Footer } from "./components/footer/Footer";
+import { Toast } from './components/toast/Toast'
 
 const App = () => {
   return (
     <>
       <Nav />
+      <Toast />
       <Header />
       <About />
       <Experience />
