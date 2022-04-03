@@ -4,9 +4,10 @@ import { AiFillCheckCircle } from 'react-icons/ai'
 // import { AiFillCloseCircle } from 'react-icons/ai'
 import { GrFormClose } from 'react-icons/gr'
 
-export const Toast = () => {
+export const Toast = ({ active }) => {
+
     return (
-        <div className='toast'>
+        <div className={active ? 'toast active' : 'toast'}>
             <div className='toast_content'>
                 <span className='check_icon'><AiFillCheckCircle /></span>
 
@@ -16,9 +17,9 @@ export const Toast = () => {
                 </div>
             </div>
 
-            {/* <GrFormClose /> */}
+            <span className='close_icon'><GrFormClose /></span>
 
-            <div className='progress'></div>
+            <div className={active ? 'progress active' : 'progress'}></div>
 
         </div>
     )

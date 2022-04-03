@@ -2,11 +2,12 @@ import './contact.css'
 import { MdOutlineMail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
 import { BsWhatsapp } from 'react-icons/bs'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
-// import { Toast } from '../toat/Toast'
+import { Toast } from '../toast/Toast'
  
 export const Contact = () => {
+  const [ active, setActive ] = useState( false )
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -15,6 +16,10 @@ export const Contact = () => {
     emailjs.sendForm('service_v0ahci4', 'template_322bfow', form.current, 'H3UNAH8mXssGNZvtw')
       .then((result) => {
         console.log(result.text);
+        setActive( true )
+        setTimeout( () => {
+          setActive( false )
+        }, 1800)
       }, (error) => {
         console.log(error.text);
       });
@@ -50,6 +55,8 @@ export const Contact = () => {
             <a href="https://api.whatsapp.com/send?phone+48517665964" target='_blank' rel='noreferrer'>Send a message</a>
           </article>
         </div>
+
+        <Toast active={active}/>
 
         <form ref={form} onSubmit={ sendEmail }>
           <input type="text" name="name" placeholder='Your Full Name' required/>
