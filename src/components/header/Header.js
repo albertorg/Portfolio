@@ -14,7 +14,7 @@ export const Header = () => {
         <HeaderSocials />
         
         <div className='me'>
-          <img src={ ME } alt="alberto rodriguez"/>
+          {/* <img src={ ME } alt="alberto rodriguez"/> */}
         </div>
       </div> 
     </header>
